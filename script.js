@@ -9,14 +9,16 @@ class Calculator {
     this.currentOperand = ''
     this.previousOperand = ''
     this.operation = undefined
-  }
+  } //this function will work for all clear button, and  we will see (this.this.currentOperand, this.previousOperand, this.operation ) is used everywhere 
 
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1)
   }
 
   appendNumber(number) {
-    if (number === '.' && this.currentOperand.includes('.')) return
+    if (number === '.' && this.currentOperand.includes('.')) return // this is for (.) not be double or more if we click (.) this button continuously
+    
+    // this.currentOperand = number
     this.currentOperand = this.currentOperand.toString() + number.toString()
   }
 
@@ -26,7 +28,7 @@ class Calculator {
       this.compute()
     }
     this.operation = operation
-    this.previousOperand = this.currentOperand
+    this.previousOperand = this. currentOperand
     this.currentOperand = ''
   }
 
